@@ -3,6 +3,8 @@
     navigator.xr &&
     navigator.xr.isSessionSupported &&
     (await navigator.xr.isSessionSupported("immersive-ar"));
+  console.log(`navigator.xr `, navigator.xr);
+  infoBox.innerText = JSON.stringify(navigator.xr, null, 4);
   if (isArSessionSupported) {
     document
       .getElementById("enter-ar")
